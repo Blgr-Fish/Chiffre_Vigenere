@@ -43,15 +43,15 @@ def chiffre_vigenere(mot_clair,cle_chiffrement):
 
 def dechiffre_vigenere(mot_chiffre,cle_dechiffrement):
     """
-    Génère un mot/une phrase déchiffrée à l'aide d'un mot chiffré et d'une clé de déchiffrement
+    Génère un mot/une phrase déchiffré à l'aide d'un mot chiffré et d'une clé de déchiffrement
     
     Paramètres 
     ----------
-    mot_clair : string
+    mot_chiffre : string
             une chaîne de caractère comprenant seulement des lettres de l'alphabet. Les lettres peuvent être
             soit en minuscule soit en majsucule. Le programme les changera en Majuscule dans tous les cas
     
-    cle_chiffrement : string 
+    cle_dechiffrement : string 
             une chaîne de caractère comprenant seulement des lettres de l'alphabet. Les lettres peuvent être
             soit en minuscule soit en majsucule. Le programme les changera en Majuscule dans tous les cas
             Il est recommandé d'avoir une clé de chiffrement assez longue pour assurer la sécurité du message.
