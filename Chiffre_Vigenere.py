@@ -89,9 +89,9 @@ cle = input('Cle de chiffrement : ')
 
 choix = input('Chiffrer/Dechiffrer : ')
 if choix.upper() == 'chiffrer'.upper() :
-    print(chiffre_vigenere(mot.upper(),cle.upper()))
+    print(chiffre_vigenere(mot.upper().replace(" ", ""),cle.upper().replace(" ", "")))
 elif choix.upper() == 'dechiffrer'.upper():
-    print(dechiffre_vigenere(mot.upper(),cle.upper()))
+    print(dechiffre_vigenere(mot.upper().replace(" ", ""),cle.upper().replace(" ", "")))
 else :
     print("Erreur syntaxe")
 
