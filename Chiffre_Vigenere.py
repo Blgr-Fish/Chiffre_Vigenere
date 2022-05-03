@@ -1,4 +1,6 @@
 import string
+from tkinter import *
+from tkinter import ttk 
 
 def chiffre_vigenere(mot_clair,cle_chiffrement):
     """
@@ -84,7 +86,7 @@ def dechiffre_vigenere(mot_chiffre,cle_dechiffrement):
 
 #TESTS
 
-mot = input('Mot à chiffrer : ')
+"""mot = input('Mot à chiffrer : ')
 cle = input('Cle de chiffrement : ')
 
 choix = input('Chiffrer/Dechiffrer : ')
@@ -93,7 +95,19 @@ if choix.upper() == 'chiffrer'.upper() :
 elif choix.upper() == 'dechiffrer'.upper():
     print(dechiffre_vigenere(mot.upper().replace(" ", ""),cle.upper().replace(" ", "")))
 else :
-    print("Erreur syntaxe")
+    print("Erreur syntaxe")"""
+
+jeu = Tk()
+
+cadre = Frame(jeu) # Création de l'interface
+cadre.pack(padx=10, pady=10)
+
+titre = Label(jeu,font=("Helvetica",50),text='CHIFFRATOR 2000')
+titre.pack()
+
+
+
+jeu.mainloop() # le programme tourne non-stop
 
 
 
