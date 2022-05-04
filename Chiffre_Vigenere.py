@@ -103,26 +103,42 @@ jeu.geometry('600x400')
 
 titre_cadre = Frame(jeu) # Création de l'interface
 titre_cadre.pack(padx=5,pady=5,side='top')
-
-titre = Label(titre_cadre,font=("Helvetica",50),text='CHIFFRATOR 2000')
+titre = Label(titre_cadre,font=("Helvetica",25),text='CHIFFRATOR 2000')
 titre.pack(padx=5,pady=5,)
 
-dechiffre_cadre = Frame(jeu)
-dechiffre_cadre.pack(padx=5,pady=5,side='left')
+cadre = LabelFrame(jeu,text='Entrée')
+cadre.pack(padx=20,pady=5,anchor=W)
+entree1 = Entry(cadre)
+entree1.pack(padx=5,pady=5)
 
-
-
-entree1 = Entry(dechiffre_cadre)
-entree1.pack(padx=5,pady=5,side='left')
 
 valeur = IntVar()
 
-boutton0 = Radiobutton(dechiffre_cadre,variable=valeur,value=0,text="Chiffrer")
-boutton0.pack(padx=5,pady=5,side='left')
-boutton1 = Radiobutton(dechiffre_cadre,variable=valeur,value=1,text="Déchiffrer")
-boutton1.pack(padx=5,pady=5,side='left')
+boutton0 = Radiobutton(jeu,variable=valeur,value=0,text="Chiffrer")
+boutton0.pack(padx=5,pady=5,anchor=W)
+boutton1 = Radiobutton(jeu,variable=valeur,value=1,text="Déchiffrer")
+boutton1.pack(padx=5,pady=5,anchor=W)
+
+
+
+dechiffre_cadre = Frame(jeu)
+dechiffre_cadre.pack(padx=5,pady=5,anchor=W)
+
+boutton_sortie =Button(dechiffre_cadre,text='Appuyer',command=chiffrement(valeur))
+
+
+
+
+cadre2 =LabelFrame(jeu,text='Sortie')
+cadre2.pack(padx=20,pady=5,anchor=W)
+
+entree2 = Entry(cadre2)
+entree2.pack(padx=5,pady=5)
+
 
 jeu.mainloop() # le programme tourne non-stop
+
+
 
 
 
