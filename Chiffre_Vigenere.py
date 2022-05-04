@@ -98,14 +98,29 @@ else :
     print("Erreur syntaxe")"""
 
 jeu = Tk()
+jeu.title('Chiffreur')
+jeu.geometry('600x400')
 
-cadre = Frame(jeu) # Création de l'interface
-cadre.pack(padx=10, pady=10)
+titre_cadre = Frame(jeu) # Création de l'interface
+titre_cadre.pack(padx=5,pady=5,side='top')
 
-titre = Label(jeu,font=("Helvetica",50),text='CHIFFRATOR 2000')
-titre.pack()
+titre = Label(titre_cadre,font=("Helvetica",50),text='CHIFFRATOR 2000')
+titre.pack(padx=5,pady=5,)
+
+dechiffre_cadre = Frame(jeu)
+dechiffre_cadre.pack(padx=5,pady=5,side='left')
 
 
+
+entree1 = Entry(dechiffre_cadre)
+entree1.pack(padx=5,pady=5,side='left')
+
+valeur = IntVar()
+
+boutton0 = Radiobutton(dechiffre_cadre,variable=valeur,value=0,text="Chiffrer")
+boutton0.pack(padx=5,pady=5,side='left')
+boutton1 = Radiobutton(dechiffre_cadre,variable=valeur,value=1,text="Déchiffrer")
+boutton1.pack(padx=5,pady=5,side='left')
 
 jeu.mainloop() # le programme tourne non-stop
 
