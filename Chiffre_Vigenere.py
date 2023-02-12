@@ -149,7 +149,7 @@ entree2 = Entry(cadre2)
 entree2.pack(padx=5,pady=5)
 
 
-jeu.mainloop() # le programme tourne non-stop
+jeu.mainloop() # le programme tourne non-stop ok
 
 
 
